@@ -1,0 +1,50 @@
+
+en
+conf t
+interface s0/0/0
+ip add 33.0.0.13  255.255.255.252
+no shut
+exit
+interface s0/1/0
+ip add 33.0.0.25  255.255.255.252
+no shut
+exit
+interface s0/0/1
+ip add 33.0.0.17  255.255.255.252
+no shut
+exit
+en
+conf t
+interface s0/1/1
+ip add 33.0.0.22  255.255.255.252
+no shut
+exit
+router eigrp 1
+network 33.0.0.12 0.0.0.3
+network 33.0.0.20 0.0.0.3
+network 33.0.0.24 0.0.0.3
+network 33.0.0.16 0.0.0.3
+
+
+
+
+
+en
+conf t
+interface s0/0/0
+ip add 33.0.0.6  255.255.255.252
+no shut
+exit
+interface s0/0/1
+ip add 33.0.0.10  255.255.255.252
+no shut
+exit
+interface s0/1/0
+ip add 33.0.0.14  255.255.255.252
+no shut
+exit
+router eigrp 1
+network 33.0.0.4  0.0.0.3
+network 33.0.0.8  0.0.0.3
+network 33.0.0.12  0.0.0.3
+
